@@ -40,7 +40,7 @@ Exemple d'entrée:
 
 function searchWordFilter(items, search) {
 
-  items.filter( film => film.includes('search')  )
+ return items.filter(film => film.toUpperCase().includes(search.toUpperCase())  )
 
 
 }
