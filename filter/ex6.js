@@ -9,30 +9,42 @@ La fonction doit éliminer les commentaires contenant au moins un des mots "bann
 
 Exemple d'entrée:
 1. des commentaires (on est resté soft pour ne pas heurter les oreilles chastes)
+
+var comments =
 [
   "Very useful tutorial, thank you so much!",
-  "React is not a damn framework, it's a LIBRARY"
+  "React is not a damn framework, it's a LIBRARY",
   "Why you put bloody kitten pictures in a tech tutorial is beyond me!",
   "Which one is better, React or Angular?",
   'There is no "better", it depends on your use case, DAMN YOU'
-]
-2. mots à bannir: ['bloody', 'damn']
+];
+//2. mots à bannir: ['bloody', 'damn']
 
-Sortie attendue:
+//Sortie attendue:
+var bannedWords=
 [
   "Very useful tutorial, thank you so much!",
-  "Which one is better, React or Angular?",
-]
+  "Which one is better, React or Angular?"
+];
 
 */
 
 function filterOffensiveComments(comments, bannedWords) {
 
-  //return comments.filter(comm => comm.toUpperCase()   { return comm.includes(bannedWords)   } )}
-  return comments.filter(name => name.endsWith(bannedWords) )
+  //return comments.filter(comm => comm.toUpperCase()   { return comm.indexOf(bannedWords)   } )}
+  //return comments.filter(comm => comm.includes(bannedWords)   )}
 
-}
+ return comments.filter(name => {
+    if(name.toUpperCase().includes(bannedWords[0].toUpperCase()) || name.toUpperCase().includes(bannedWords[1].toUpperCase())){
+      return false
+    }
+    return true
+     
 
+ 
+})}
+//console.log(filterOffensiveComments(comments, bannedWords)) 
+//console.log(filterOffensiveComments(comments, bannedWords)) 
 
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;

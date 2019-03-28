@@ -12,7 +12,13 @@ Tableau renvoyé par multiplyOddIndices:
   [3, 8, 11, 39, 19, 35]
 */
 
+//return numbers.filter(filtre => filtre %5 === 0) 
+
+
 function multiplyOddIndices(numbers) {
-}
+
+ return numbers.map(poly => poly % 3 === 0 ?  poly *3 : poly*10)}
+
+
 
 module.exports = multiplyOddIndices;
