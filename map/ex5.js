@@ -17,7 +17,7 @@ Tableau renvoyé par multiplyOddIndices:
 
 function multiplyOddIndices(numbers) {
 
- return numbers.map(poly => poly % 3 === 0 ?  poly *3 : poly*10)}
+ return numbers.map((poly, idx) =>( idx %2  != 0 ?  (poly * idx) : poly) )}
 
 
 
