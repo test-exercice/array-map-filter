@@ -51,6 +51,26 @@ Sortie attendue:
 */
 
 function getStudentsPerCurriculum(campuses, curriculumName) {
+
+  const campu = campuses.filter ( camp => {
+    
+    for (let i = 0 ; i < camp.curriculums.length; i++){
+      if(camp.curriculums.name === curriculumName)
+      
+      return (campuses.city)
+    }
+    
+   }) 
+    
+    
+return (campu.city)
+//return campu.map(camville => camville[0])
+
+
+
+
+
+
 }
 
 module.exports = getStudentsPerCurriculum;

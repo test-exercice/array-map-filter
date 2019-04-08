@@ -24,12 +24,13 @@ Sortie attendue:
 
 function getJedisNames(characters) {
 
-  function 
+  const perso =  characters.filter(character=>  character.side=='light' )
 
-  return  characters.filter(lumiere => lumiere.side === 'light' )
-
+  return perso.map(pers=>(pers.name))
 
   
 }
 
 module.exports = getJedisNames;
+
+
